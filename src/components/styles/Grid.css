@@ -1,0 +1,8 @@
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: grid;
+    width: 65vh;
+    height: 65vh;
+}

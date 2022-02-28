@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Grid from './components/Grid.jsx'
+import Word from './components/Word'
+import './App.css'
+import { useContext } from 'react'
+import { GridContext } from './context/GridContext.jsx'
 
-function App() {
+const App = () => {
+  const {
+    setWord,
+    setCellAround,
+    setLetters,
+    setCellAvailables,
+    setSelectedCards,
+    setState,
+  } = useContext(GridContext)
+  const resetGame = () => {
+    setWord([])
+    setLetters([])
+    setCellAround([])
+    setState('')
+    setCellAvailables([])
+    setSelectedCards([])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="container">
+        <section className="container-grid">
+          <Grid />
+        </section>
+        <section className="container-word">
+          <div className="clear-word">
+            <p className="p-word">clear word</p>
+            <button className="btn-clear-word" onClick={resetGame}>
+              X
+            </button>
+          </div>
+          <div key={`container`} className="container-letter">
+            <Word />
+          </div>
+        </section>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
