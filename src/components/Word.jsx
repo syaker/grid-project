@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from 'react'
 import { GridContext } from '../context/GridContext'
 import dictionary from '../utils/dictionary.json'

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react'
 import { GridContext } from '../context/GridContext.jsx'
 import { getRandomNumber } from '../utils/findCell.js'
