@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import './styles/Card.css'
-import dictionary from '../utils/dictionary.json'
-import { GridContext } from '../context/GridContext.jsx'
-import { gridAround } from '../utils/findCell'
+import './Card.css'
+import dictionary from '../../utils/dictionary.json'
+import { GridContext } from '../../context/GridContext.jsx'
+import { gridAround } from '../../utils/findCell'
 
 const Card = ({ id, letter }) => {
   const {

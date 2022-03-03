@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react'
-import { GridContext } from '../context/GridContext.jsx'
-import { getRandomNumber } from '../utils/findCell.js'
-import alphabet from '../utils/test-board-1.json'
-import Card from './Card'
-import './styles/Grid.css'
+import { GridContext } from '../../context/GridContext.jsx'
+import { getRandomNumber } from '../../utils/findCell.js'
+import alphabet from '../../utils/test-board-1.json'
+import Card from '../Card/Card.jsx'
+import './Grid.css'
 
 const Grid = () => {
   let { grid } = useContext(GridContext)
