@@ -72,7 +72,7 @@ html {
   border: none;
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .container {
     display: grid;
     grid-area: container;
@@ -152,5 +152,103 @@ html {
 
   .single-letter-valid {
     font-size: 1.7em;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  .container {
+    display: grid;
+    grid-area: container;
+    grid-template-areas:
+      'container-reset'
+      'container-grid'
+      'container-word';
+    width: 22em;
+    height: 90vh;
+  }
+
+  .container-word {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  .container-letter {
+    width: 100%;
+    border: 3px solid;
+    border-color: #979797;
+    height: 1em;
+    padding: 3vh 2vh 3vh;
+    margin: 0;
+  }
+
+  .container-reset {
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    margin: 0;
+    width: 100%;
+    height: 23em;
+  }
+
+  .card {
+    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    border: 0.22em solid;
+    border-color: rgb(196, 37, 56);
+    width: 4.8em;
+    height: 4.8em;
+    margin: 0;
+  }
+
+  .letter {
+    font-size: 2.3em;
+  }
+
+  .invalid {
+    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    background-color: #e84555;
+    color: white;
+    border: none;
+  }
+
+  .valid {
+    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    background-color: #aee84e;
+    color: white;
+    border: none;
+  }
+
+  .placeholder {
+    font-size: 1.4em;
+  }
+
+  .single-letter-invalid {
+    font-size: 2em;
+  }
+
+  .single-letter-valid {
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1010px) {
+  .card {
+    width: 12.8vh;
+    height: 12.8vh;
+  }
+  .grid {
+    width: 65vh;
+    height: 58vh;
+  }
+
+  .container-letter {
+    height: 8vh;
   }
 }
