@@ -1,5 +1,5 @@
-import Grid from './components/Grid.jsx'
-import Word from './components/Word'
+import Grid from './components/Grid/Grid.jsx'
+import Word from './components/Word/Word.jsx'
 import './App.css'
 import { useContext } from 'react'
 import { GridContext } from './context/GridContext.jsx'
@@ -27,13 +27,15 @@ const App = () => {
         <section className="container-grid">
           <Grid />
         </section>
-        <section className="container-word">
+        <section className="container-reset">
           <div className="clear-word">
             <p className="p-word">clear word</p>
             <button className="btn-clear-word" onClick={resetGame}>
               X
             </button>
           </div>
+        </section>
+        <section className="container-word">
           <div key={`container`} className="container-letter">
             <Word />
           </div>
