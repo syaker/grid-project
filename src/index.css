@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('.//assets/Montserrat-Bold.ttf');;
+  src: url('./assets/text/Montserrat-Bold.ttf');;
 }
 body {
   font-family: Montserrat;

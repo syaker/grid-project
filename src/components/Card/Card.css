@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 13.6vh;
-  height: 13.6vh;
+  width: var(--size-card);
+  height: var(--size-card);
   padding: 0;
   border-radius: 10px;
   margin: 1vh;

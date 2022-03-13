@@ -1,20 +1,17 @@
 const assignValues = (grid) => {
   // Filas
-  const rows = {
-    0: [],
-    1: [],
-    2: [],
-    3: [],
-  }
+  const rows = []
 
-  let count = 0
   // Asignar valores a las columnas en las filas
-  Object.keys(rows).forEach((key) => {
-    while (Object.values(rows[key]).length < grid) {
-      rows[key].push(count + 1)
+  let count = 0
+  for (let i = 0; i < grid; i++) {
+    const row = []
+    while (row.length < grid) {
+      row.push(count + 1)
       count++
     }
-  })
+    rows.push(row)
+  }
 
   return rows
 }
@@ -23,9 +20,8 @@ const assignValues = (grid) => {
 const gridAround = (id, rows) => {
   let cell
   // Identificar fila y columna
-  Object.keys(rows).forEach((key) => {
-    if (rows[key].includes(id))
-      cell = { row: Number(key), column: Number(rows[key].indexOf(id)) }
+  rows.forEach((row, index) => {
+    if (row.includes(id)) cell = { row: index, column: Number(row.indexOf(id)) }
   })
 
   let cellAvailables = []
@@ -37,8 +33,8 @@ const gridAround = (id, rows) => {
     cellAvailables = []
     let positionRow = -1
     while (positionRow < 2) {
-      let positionColumn = -1
       if (rows[row + positionRow]) {
+        let positionColumn = -1
         while (positionColumn < 2) {
           if (rows[row + positionRow][column + positionColumn] !== id)
             cellAvailables.push(
@@ -53,7 +49,7 @@ const gridAround = (id, rows) => {
 
   findGridAround(row, column)
 
-  return cellAvailables.filter(e => e !== undefined)
+  return cellAvailables.filter((e) => e !== undefined)
 }
 
 // Obtener numero en un intervalo

@@ -3,6 +3,13 @@ html {
   margin: 0;
 }
 
+:root {
+  --size-card: 13.6vh;
+  --shadow-card: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+  --shadow-card-invalid: inset 0px -56px 32px -12px #ae1127;
+  --shadow-card-valid: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+}
+
 #root {
   display: grid;
   grid-template-areas:
@@ -116,7 +123,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     height: 3.8em;
@@ -129,14 +136,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;
@@ -199,7 +206,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     width: 4.1em;
@@ -212,14 +219,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;
@@ -292,7 +299,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     width: 4.8em;
@@ -305,14 +312,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;

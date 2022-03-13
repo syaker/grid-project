@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import './Card.css'
-import dictionary from '../../utils/dictionary.json'
+import dictionary from '../../assets/files/dictionary.json'
 import { GridContext } from '../../context/GridContext.jsx'
 import { gridAround } from '../../utils/findCell'
 
