@@ -23,14 +23,14 @@
 }
 
 .invalid {
-  box-shadow: inset 0px -56px 32px -12px #ae1127;
+  box-shadow: var(--shadow-card-invalid);
   background-color: #e84555;
   color: white;
   border: none;
 }
 
 .valid {
-  box-shadow: inset 0px -78px 38px -12px #5ba72c;
+  box-shadow: var(--shadow-card-valid);
   background-color: #aee84e;
   color: white;
   border: none;

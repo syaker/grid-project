@@ -39,14 +39,14 @@ html {
 
 .container-word {
   grid-area: container-word;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   width: 40vw;
 }
 
 .container-reset {
   grid-area: container-reset;
+}
+
+.right-side {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -54,13 +54,13 @@ html {
 
 .container-letter {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 32.5vw;
   height: 10vh;
   border: 2px solid;
   border-color: #979797;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 1vh;
   padding: 3vh 4vh 3vh 5vh;
 }
@@ -85,11 +85,11 @@ html {
 
 .btn-clear-word {
   color: white;
+  border: none;
   background-color: #d8d8d8;
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
-  border: none;
 }
 
 @media only screen and (max-width: 335px) {
@@ -260,12 +260,11 @@ html {
   .btn-clear-word {
     height: 6vh;
     width: 6vh;
-}
+  }
 
-.p-word {
-  font-size: 2.5vh;
-
-}
+  .p-word {
+    font-size: 2.5vh;
+  }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 425px) {
