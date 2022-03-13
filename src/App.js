@@ -27,7 +27,7 @@ const App = () => {
         <section className="container-grid">
           <Grid />
         </section>
-        <section className="container-reset">
+        <section className="container-reset right-side">
           <div className="clear-word">
             <p className="p-word">clear word</p>
             <button className="btn-clear-word" onClick={resetGame}>
@@ -35,7 +35,7 @@ const App = () => {
             </button>
           </div>
         </section>
-        <section className="container-word">
+        <section className="container-word right-side">
           <div key={`container`} className="container-letter">
             <Word />
           </div>

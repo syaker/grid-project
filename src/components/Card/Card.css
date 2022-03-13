@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 13.6vh;
-  height: 13.6vh;
+  width: var(--size-card);
+  height: var(--size-card);
   padding: 0;
   border-radius: 10px;
   margin: 1vh;
@@ -23,14 +23,14 @@
 }
 
 .invalid {
-  box-shadow: inset 0px -56px 32px -12px #ae1127;
+  box-shadow: var(--shadow-card-invalid);
   background-color: #e84555;
   color: white;
   border: none;
 }
 
 .valid {
-  box-shadow: inset 0px -78px 38px -12px #5ba72c;
+  box-shadow: var(--shadow-card-valid);
   background-color: #aee84e;
   color: white;
   border: none;
@@ -50,17 +50,4 @@
   color: #ae1127;
   justify-content: center;
   margin: 0 1vh 0 0;
-}
-
-.container-letter {
-  display: flex;
-  width: 32.5vw;
-  height: 10vh;
-  border: 2px solid;
-  border-color: #979797;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1vh;
-  padding: 3vh 4vh 3vh 5vh;
 }

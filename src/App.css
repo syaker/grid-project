@@ -3,6 +3,13 @@ html {
   margin: 0;
 }
 
+:root {
+  --size-card: 13.6vh;
+  --shadow-card: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+  --shadow-card-invalid: inset 0px -56px 32px -12px #ae1127;
+  --shadow-card-valid: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+}
+
 #root {
   display: grid;
   grid-template-areas:
@@ -32,17 +39,30 @@ html {
 
 .container-word {
   grid-area: container-word;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   width: 40vw;
 }
 
 .container-reset {
   grid-area: container-reset;
+}
+
+.right-side {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+.container-letter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 32.5vw;
+  height: 10vh;
+  border: 2px solid;
+  border-color: #979797;
+  margin-bottom: 1vh;
+  padding: 3vh 4vh 3vh 5vh;
 }
 
 .clear-word {
@@ -65,11 +85,11 @@ html {
 
 .btn-clear-word {
   color: white;
+  border: none;
   background-color: #d8d8d8;
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
-  border: none;
 }
 
 @media only screen and (max-width: 335px) {
@@ -116,7 +136,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     height: 3.8em;
@@ -129,14 +149,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;
@@ -199,7 +219,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     width: 4.1em;
@@ -212,14 +232,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;
@@ -240,12 +260,11 @@ html {
   .btn-clear-word {
     height: 6vh;
     width: 6vh;
-}
+  }
 
-.p-word {
-  font-size: 2.5vh;
-
-}
+  .p-word {
+    font-size: 2.5vh;
+  }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 425px) {
@@ -292,7 +311,7 @@ html {
   }
 
   .card {
-    box-shadow: inset 0px -3.5em 2.2em -1.8em rgb(247 119 36);
+    box-shadow: var(--shadow-card);
     border: 0.22em solid;
     border-color: rgb(196, 37, 56);
     width: 4.8em;
@@ -305,14 +324,14 @@ html {
   }
 
   .invalid {
-    box-shadow: inset 0px -56px 32px -12px #ae1127;
+    box-shadow: var(--shadow-card-invalid);
     background-color: #e84555;
     color: white;
     border: none;
   }
 
   .valid {
-    box-shadow: inset 0em -2.9em 1.55em -0.38em #5ba72c;
+    box-shadow: var(--shadow-card-valid);
     background-color: #aee84e;
     color: white;
     border: none;
