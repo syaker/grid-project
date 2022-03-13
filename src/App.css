@@ -52,6 +52,19 @@ html {
   justify-content: flex-end;
 }
 
+.container-letter {
+  display: flex;
+  width: 32.5vw;
+  height: 10vh;
+  border: 2px solid;
+  border-color: #979797;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+  padding: 3vh 4vh 3vh 5vh;
+}
+
 .clear-word {
   display: flex;
   justify-content: flex-end;
